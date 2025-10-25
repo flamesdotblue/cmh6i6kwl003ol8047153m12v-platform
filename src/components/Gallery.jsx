@@ -3,48 +3,46 @@ import { motion } from "framer-motion";
 
 const items = [
   {
-    src: "https://images.unsplash.com/photo-1621784563330-ef8f0953b832?q=80&w=1600&auto=format&fit=crop",
-    alt: "Royal blue sherwani with gold zardozi detailing",
-    tag: "Men • Sherwani",
+    src: "https://images.unsplash.com/photo-1633114128179-2ca12678a8f6?q=80&w=2000&auto=format&fit=crop",
+    alt: "Editorial portrait, couture embroidery in luxury light",
+    tag: "Editorial",
   },
   {
-    src: "https://images.unsplash.com/photo-1631366937684-27cfd87c1a73?q=80&w=1600&auto=format&fit=crop",
-    alt: "Ivory lehenga with intricate hand embroidery",
-    tag: "Women • Couture",
+    src: "https://images.unsplash.com/photo-1549216963-72c1712c1195?q=80&w=2000&auto=format&fit=crop",
+    alt: "Regal studio—sherwani with antique gold work",
+    tag: "Royal Wear",
   },
   {
-    src: "https://images.unsplash.com/photo-1621783899606-d39f0a32f46b?q=80&w=1600&auto=format&fit=crop",
-    alt: "Maroon sherwani in regal studio lighting",
-    tag: "Men • Sherwani",
+    src: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=2000&auto=format&fit=crop",
+    alt: "Close-up of beadwork and thread textures",
+    tag: "Detail",
   },
   {
-    src: "https://images.unsplash.com/photo-1571907480495-27f3b66c2bcc?q=80&w=1600&auto=format&fit=crop",
-    alt: "Gold-thread floral embroidery close-up",
-    tag: "Craft • Detail",
+    src: "https://images.unsplash.com/photo-1615634260167-1ebf14ebc11f?q=80&w=2000&auto=format&fit=crop",
+    alt: "Couture silhouette with emerald accents",
+    tag: "Women",
   },
   {
-    src: "https://images.unsplash.com/photo-1632659477857-03ba9f5e7b40?q=80&w=1600&auto=format&fit=crop",
-    alt: "Contemporary lehenga set with heritage motifs",
-    tag: "Women • Ensemble",
+    src: "https://images.unsplash.com/photo-1578321272176-35f49d941e87?q=80&w=2000&auto=format&fit=crop",
+    alt: "Handcrafted fabric textures and brocade",
+    tag: "Texture",
   },
   {
-    src: "https://images.unsplash.com/photo-1621784465011-1c19708a7920?q=80&w=1600&auto=format&fit=crop",
-    alt: "Sherwani cuff with beaded handwork",
-    tag: "Craft • Detail",
+    src: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2000&auto=format&fit=crop",
+    alt: "Runway-like portrait, onyx with gold filigree",
+    tag: "Editorial",
   },
 ];
 
 const Gallery = () => {
   return (
     <section id="gallery" className="relative mx-auto max-w-7xl px-6 py-20">
-      <div className="mb-10">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#b08d57]/30 px-3 py-1 text-xs tracking-widest text-[#e9e4d9]/70">
-          FEATURED WORK
-        </div>
-        <h2 className="mt-3 text-3xl font-semibold text-[#f4efe6] md:text-4xl">Gallery of Royal Craftsmanship</h2>
-        <p className="mt-2 max-w-3xl text-[#e9e4d9]/75">
-          Explore our signature embroidery across couture womenswear and regal menswear. Hover to reveal details.
-        </p>
+      <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#c9ad6a]/30 px-3 py-1 text-[11px] tracking-[0.25em] text-[#eae5da]/70">
+        GALLERY
+      </div>
+      <div className="mb-8">
+        <h2 className="text-3xl font-semibold text-[#f4efe6] md:text-4xl">Cinematic Frames</h2>
+        <p className="mt-2 max-w-3xl text-[#eae5da]/80">A visual narrative in light, texture, and time—celebrating the art of hand embroidery and couture forms.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -55,35 +53,14 @@ const Gallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: idx * 0.05 }}
-            className="group relative overflow-hidden rounded-2xl border border-[#b08d57]/20 bg-[#0b132b]/40"
+            className="group relative overflow-hidden rounded-2xl border border-[#c9ad6a]/25 bg-black/40"
           >
-            <img src={item.src} alt={item.alt} className="h-72 w-full object-cover transition duration-700 group-hover:scale-105" />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b132b] via-transparent to-transparent opacity-60" />
+            <img src={item.src} alt={item.alt} className="h-72 w-full object-cover transition duration-[1500ms] group-hover:scale-105" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4">
-              <div className="rounded-full bg-[#0b132b]/70 px-3 py-1 text-xs text-[#e9e4d9]/90">
-                {item.tag}
-              </div>
-              <div className="rounded-full border border-[#b08d57]/40 bg-[#0b132b]/60 px-3 py-1 text-[10px] tracking-wider text-[#b08d57] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                VIEW DETAILS
-              </div>
+              <div className="rounded-full bg-black/60 px-3 py-1 text-xs text-[#eae5da]/90">{item.tag}</div>
+              <div className="rounded-full border border-[#c9ad6a]/50 bg-black/50 px-3 py-1 text-[10px] tracking-wider text-[#c9ad6a] opacity-0 transition-opacity duration-500 group-hover:opacity-100">VIEW</div>
             </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Testimonials / Collaborations */}
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
-        {["Exhibition-Grade Finish", "Trusted by Boutiques", "Couture-Ready Quality"].map((t, i) => (
-          <motion.div
-            key={t}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 * i }}
-            className="rounded-2xl border border-[#b08d57]/30 bg-[#0b132b]/40 p-6"
-          >
-            <p className="text-sm text-[#e9e4d9]/85">“{t}. Impeccable detailing and responsive production timelines.”</p>
-            <div className="mt-4 text-xs text-[#e9e4d9]/60">— Partner Boutique, Mumbai</div>
           </motion.div>
         ))}
       </div>
